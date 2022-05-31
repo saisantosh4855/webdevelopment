@@ -31,5 +31,3 @@
 # pseudoclasses
 # attribute selector 
 
-
-Changes from sai
