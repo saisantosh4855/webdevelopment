@@ -37,7 +37,7 @@
 }
 
   /*  overwriting the classes add new property without effect parent class */
-.parent.parent-two  {
+.parent.parent-two.parent-three.parent-four {
     border: 5px solid yellow; 
 }
 
