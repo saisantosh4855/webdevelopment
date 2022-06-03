@@ -56,3 +56,72 @@
 /*changes by saibranch*/
 
 /* main changes again*/
+
+ul{
+    width: 250px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    border: 5px dotted green;
+}
+ul li{
+    border: 2px solid greenyellow;
+}
+
+#id_test{
+    border: 5px solid rgb(183, 10, 114);
+}
+
+ul>li{
+    border: 2px solid blue;
+    margin: 5px;
+}
+
+ul+li{
+    border: 2px solid rgb(248, 47, 255);
+    width: 200px;
+}
+
+ul~li{
+    border: 2px solid rgb(199, 224, 55);
+    width: 200px;
+}
+
+li[class='n']{
+    font-size: 50px;
+}
+
+li[class^='n']{
+    font-size: 100px;
+    color: brown;
+}
+
+li[class$='e']{
+    font-size: 70px;
+    color: rgb(209, 19, 186);
+}
+/*here it has to be word */
+li[class~='one']{
+    font-size: 70px;
+    color: rgb(41, 209, 19);
+}
+
+/*The value does not have to be a whole word! */
+li[class*='N' i]{
+    font-size: 20px;
+    color: skyblue;
+}
+
+li:hover{
+    color: brown;
+    font-size: 50px;
+}
+
+li:hover:first-child{
+    color: rgb(3, 16, 155);
+    font-size: 50px;
+}
+
+li::before{
+    content: 'sa54646 ';
+}
