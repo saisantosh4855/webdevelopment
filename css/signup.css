@@ -1,0 +1,8 @@
+*{
+    /* box-sizing: border-box; */
+}
+
+.user-form{
+    width: 350px;
+    margin: 0 auto;
+}
