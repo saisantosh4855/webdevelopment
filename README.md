@@ -28,7 +28,7 @@
 # attribute selector
 # Forms
 
-# Pending⏬
+# /*--------Pending---------*/⏬
 # Background
 # Gradient
 # Sliders
