@@ -22,14 +22,28 @@
 # element selector 
 # class selector
 # id selector
-
-# Pending:
 # specificity
-# background
-# linearGradient
 # pseudoelements
 # pseudoclasses
-# attribute selector 
+# attribute selector
+# Forms
+
+# Pending⏬
+# Background
+# Gradient
+# Sliders
+# Tables
+# Animation (Transition)
+# Media Query
+# Units
+# Dropdown (Select styling as well)
+# Image Sprites
+# CSS Counters
+# CSS Math Functions
+# CSS Grid
+# Vertical align
+
+
 
 changes by main
 
