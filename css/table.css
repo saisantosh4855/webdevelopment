@@ -1,0 +1,76 @@
+*{
+    /* margin: 0px;
+    padding: 0px; */
+    font-family: sans-serif;font-size: small;
+}
+
+.table-one{
+    /* border: 1px solid red; */
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* .table-one td,th{
+    border: 1px solid red;
+    text-align: center;
+} */
+
+.table-one thead tr{
+    background-color: greenyellow;
+    color: white;
+    text-align: left;
+    /* font-weight: bold; */
+}
+
+.table-one th,td{
+    padding: 12px 15px;
+}
+
+.table-one tbody tr{
+    border-bottom: 1px solid lightgray;
+}
+
+.table-one tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.table-one tbody tr:last-of-type{
+    border-bottom: 2px solid greenyellow;
+}
+
+.table-one tbody tr.active-row{
+    font-weight: bold;
+    color: yellowgreen;
+}
+
+.table-two{
+    border: 2px solid lightgray;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table-two thead tr{
+    background-color: rgba(211, 211, 211, 0.365);
+}
+
+.table-two td,th{
+    border: 1px solid lightgray;
+    padding: 8px 10px;
+}
+
+.table-two tbody tr:nth-child(odd){
+    background-color: rgba(211, 211, 211, 0.116);
+}
+
+.table-two thead tr th:first-child{
+    background-color: white;
+}
+
+.table-two tbody tr th{
+    background-color: rgba(211, 211, 211, 0.365);
+}
