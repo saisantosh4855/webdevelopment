@@ -72,6 +72,6 @@ html { height: 100%; }
 
 @keyframes flavours {
   to {
-    /* background-position: 0 -1000vh; */
+    background-position: 0 -1000vh;
   }
 }

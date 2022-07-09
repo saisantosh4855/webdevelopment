@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-parent{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid cyan;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 1fr;
+    /* grid-template-rows: repeat(100px); */
+    /* grid-template-rows: minmax(50px,100px); */
+    /* grid-template-rows: 50px 50px 50px; */
+    /* justify-items: center;
+    align-items: center; */
+    /* place-items: center; */
+}
+
+.grid-child{
+    background-color: lightpink;
+}
+
+.grid-child-one{
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    /* justify-self: center;
+    align-self: center; */
+}
+
+
+.grid-area{
+    width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-areas:"aa aa aa aa"
+                        "aa aa aa aa"
+                        "bb bb cc cc"
+                        "dd dd dd dd"
+                        "hh hh ii ii"
+                        "ee ee ii ii"
+                        "ee ee jj jj"
+                        "ff ff ff ff"
+                        "gg gg gg gg";
+}
+
+.grid-area > div{
+    padding: 10px;
+    border: 2px solid cyan;
+    word-break: break-all;
+}
+
+.grid-area .one{
+grid-area: aa;
+background-color: brown;
+}
+
+.two{
+    grid-area:bb;
+background-color: green;
+}
+
+.three{
+    grid-area:cc;
+background-color: blue;
+}
+
+.four{
+    grid-area:dd;
+    background-color: rgb(177, 5, 157);
+}
+
+.five{
+    grid-area:ee;
+    background-color: rgb(5, 177, 177);
+}
+
+.six{
+    grid-area:ff;
+background-color: blue;
+}
+
+.seven{
+    grid-area:gg;
+    background-color: rgb(177, 5, 157);
+}
+
+.eight{
+    grid-area:hh;
+    background-color: rgb(5, 177, 177);
+}
+
+
+.nine{
+    grid-area:ii;
+    background-color: rgb(177, 5, 157);
+}
+
+.ten{
+    grid-area:jj;
+    background-color: rgb(5, 177, 177);
+}
