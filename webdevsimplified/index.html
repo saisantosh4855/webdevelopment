@@ -7,6 +7,38 @@
     <title>Web Development Simplified</title>
 </head>
 <body>
-    <script src="shallowcopy.js"></script>
+    <div id="demo3" style="margin: 0 auto;width: 200px;height: 100px;border: 2px solid green;padding: 10px;border-radius: 5px;">
+        <p id="demo1">Hello there!!!</p>
+        <button id="demo">Change Text!</button>
+    </div>
+    <script>
+                let ido = document.getElementById("demo");
+                ido.addEventListener('click', function () {
+                    ido.innerText = "Changed!"
+                    document.getElementById("demo1").innerHTML = "Welcome!"
+                    document.getElementById("demo1").style.fontSize = "20px"
+                    // document.getElementById("demo1").style.font="bold"
+                    document.getElementById("demo3").style.background = "cyan"
+                    // document.write("Welcome to the DOM!!!")
+                    let ido2 = document.getElementById("demo");
+                    ido2.addEventListener('click', function () {
+                        ido.innerText = "Changed Again!"
+                        document.getElementById("demo1").innerHTML = "Welcome again!"
+                        document.getElementById("demo3").style.background = "green"
+                        let ido3 = document.getElementById("demo");
+                        ido3.addEventListener('click', function () {
+                            ido.innerText = "Changed Third time!"
+                            document.getElementById("demo1").innerHTML = "Welcome Third time!"
+                            document.getElementById("demo3").style.background = "orange"
+                            let ido4 = document.getElementById("demo");
+                            ido4.addEventListener('click', function () {
+                               function fun(){
+                                document.getElementById("demo").reset();
+                               }
+                            })
+                        })
+                    })
+                })
+    </script>
 </body>
 </html>
