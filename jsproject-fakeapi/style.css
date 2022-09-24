@@ -67,7 +67,7 @@ body{
     flex: 1 0 32%;
      /* width: 200px;
     height: 200px;  */
-    height: 200px;
+    height: max-content;
     /* margin-left:5px; */
     /* border:1px solid red; */
     padding: 15px;
@@ -103,5 +103,10 @@ body{
     width: 100px;
     margin: 0 auto;
     color: red;
+}
+
+.prodimage{
+    height: 100px;
+    width: 100px;
 }
 

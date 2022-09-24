@@ -13,8 +13,8 @@ window.onload = function dataload(){
 }
 
 async function data() {
-    // let getdata = await fetch('https://jsonplaceholder.typicode.com/users');
-    let getdata = await fetch('https://fakestoreapi.com/products');
+    let getdata = await fetch('https://jsonplaceholder.typicode.com/users');
+    // let getdata = await fetch('https://fakestoreapi.com/products');
     if (!getdata.ok) {
         let error_message = document.createElement('p');
         document.body.appendChild(error_message);
@@ -40,31 +40,51 @@ async function data() {
         carddivpar.appendChild(cardChi);
         cardChi.classList.add('card-content');
 
-        let pid = document.createElement('p');
-        cardChi.appendChild(pid);
-        pid.innerHTML = "<b>Id:</b> " + element.id;
+        let uid = document.createElement('p');
+        cardChi.appendChild(uid);
+        uid.innerHTML = "<b>Id:</b> " + element.id;
 
-        let p = document.createElement('p');
-        cardChi.appendChild(p);
-        p.innerHTML = "<b>Name:</b> " + element.title;
+        let uname = document.createElement('p');
+        cardChi.appendChild(uname);
+        uname.innerHTML = "<b>Name:</b> " + element.name;
 
-        // let adde = document.createElement('div')
-        // cardChi.appendChild(adde);
-        // adde.innerHTML = "Address :";
-        // adde.classList.add('adress')
+        let umail = document.createElement('p');
+        cardChi.appendChild(umail);
+        umail.innerHTML = "<b>Email:</b> " + element.email;
+
+        let uaddrp = document.createElement('div')
+        cardChi.appendChild(uaddrp);
+        uaddrp.classList.add('adress')
+
+        let uaddr1 = document.createElement('p')
+        uaddrp.appendChild(uaddr1);
+        uaddr1.innerHTML = "<b>Address:</b> "
+
         // let addkeys = Object.keys(element.address)
-        // adde.innerHTML =  + addkeys;
+        // uaddr.innerHTML = "<b>Address:</b> " + addkeys;
         // street,suite,city,zipcode,geo
-        let addchis = document.createElement('p')
-        cardChi.appendChild(addchis);
-        addchis.innerHTML = "<b>Price:</b> " + element.price + "<br>";
-        let addchisu = document.createElement('p')
-        cardChi.appendChild(addchisu);
-        addchisu.innerHTML = "<b>Category:</b> " + element.category;
-       
+        let uaddr2 = document.createElement('div')
+        uaddrp.appendChild(uaddr2);
+        let ucitytemp = document.createElement('p')
+        uaddr2.appendChild(ucitytemp);
+        ucitytemp.innerHTML = "&nbsp";
+        let ustreet = document.createElement('p')
+        uaddr2.appendChild(ustreet);
+        ustreet.innerHTML = "<b>Street:</b> " + element.address.street + "<br>";
+        let ucity = document.createElement('p')
+        uaddr2.appendChild(ucity);
+        ucity.innerHTML = "<b>City:</b> " + element.address.city;
+        
+        selectuser(cardChi, element.id);
 
     });
 
+    function selectuser(selecteditem,id){
+        selecteditem.addEventListener('click', function(){
+            localStorage.setItem("id",id);
+            window.location.href="http://127.0.0.1:5500/jsproject/userdetail.html";
+        })
+    }
 
 }
 

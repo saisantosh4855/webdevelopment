@@ -9,6 +9,7 @@ let userdata = document.getElementById('userdata');
 
 
 window.onload = function dataload(){
+    debugger;
     data();
 }
 
@@ -40,6 +41,11 @@ async function data() {
         carddivpar.appendChild(cardChi);
         cardChi.classList.add('card-content');
 
+        let pimage=document.createElement('img');
+        cardChi.appendChild(pimage);
+        pimage.src = element.image;
+        pimage.classList.add('prodimage');
+
         let pid = document.createElement('p');
         cardChi.appendChild(pid);
         pid.innerHTML = "<b>Id:</b> " + element.id;
@@ -61,10 +67,16 @@ async function data() {
         let addchisu = document.createElement('p')
         cardChi.appendChild(addchisu);
         addchisu.innerHTML = "<b>Category:</b> " + element.category;
-       
+        selectuser(cardChi, element.id);
 
     });
 
+    function selectuser(selecteditem,id){
+        selecteditem.addEventListener('click', function(){
+            localStorage.setItem("id",id);
+            window.location.href="http://127.0.0.1:5500/jsproject/userdetail.html";
+        })
+    }
 
 }
 
